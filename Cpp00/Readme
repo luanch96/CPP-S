@@ -1,1 +1,86 @@
+Resumen
 
+1. Estructura del Programa
+  -El programa está dividido en tres archivos principales:
+        ---main.cpp: Contiene la función principal y la lógica de interacción con el usuario
+        ---PhoneBook.hpp y PhoneBook.cpp: Define la clase PhoneBook que maneja la agenda
+        ---Contact.hpp y Contact.cpp: Define la clase Contact que representa cada contacto
+2. Clase Contact
+ -Almacena la información de cada contacto:
+        ---Índice
+        ---Nombre (first_name)
+        ---Apellido (last_name)
+        ---Apodo (nickname)
+        ---Número de teléfono (phone_number)
+        ---Secreto más oscuro (darkestsecret)
+ -Tiene tres métodos principales:
+        ---start_info(): Inicializa la información del contacto
+        ---printinfo(): Muestra toda la información del contacto
+        ---lineformat(): Muestra el contacto en formato de tabla
+3. Clase PhoneBook
+ -Maneja una lista de hasta 8 contactos
+ -Tiene tres métodos principales:
+        ---addcontact(): Añade un nuevo contacto
+        ---print_list(): Muestra la lista de contactos en formato de tabla
+        ---print_contact(): Muestra la información detallada de un contacto específico
+4.Flujo del Programa (main.cpp)
+ while(true) {
+       // 1. Mostrar menú
+       // 2. Leer opción del usuario
+       // 3. Procesar opción:
+       //    - ADD: Solicitar y guardar nuevo contacto
+       //    - SEARCH: Mostrar lista y detalles de contacto
+       //    - EXIT: Salir del programa
+   }
+5. Funcionalidades Específicas
+ a) Añadir Contacto (ADD):
+   - Solicita: firstname, lastname, nickname, phone, darkestsecret
+   - Valida que ningún campo esté vacío
+   - Valida que el número de teléfono contenga solo dígitos
+   - Guarda el contacto en la agenda
+ b) Buscar Contacto (SEARCH):
+   - Muestra lista de contactos en formato de tabla
+   - Solicita índice del contacto a mostrar
+   - Valida que el índice sea válido
+   - Muestra información detallada del contacto
+ c)  Salir (EXIT):
+   - Termina el programa
+
+6. Validaciones Importantes
+        -Verifica que los campos no estén vacíos
+        -Valida que el número de teléfono contenga solo dígitos
+        -Verifica que el índice en la búsqueda sea válido
+        -Maneja el caso de EOF (Ctrl+D) para salir del programa
+7. Formato de Salida
+        -Menú principal con marco de asteriscos
+        -Lista de contactos en formato de tabla con columnas alineadas
+        -Información detallada del contacto con formato claro
+8. Características Técnicas
+        -Uso de std::string para manejo de texto
+        -Uso de std::iomanip para formateo de salida
+        -Manejo de entrada/salida con std::cin y std::cout
+        -Validación de entrada de usuario
+        -Gestión de memoria automática (no requiere new/delete)
+9. Limitaciones
+        -Máximo 8 contactos (los nuevos sobrescriben los más antiguos)
+        -No persiste los datos entre ejecuciones
+        -No permite modificar contactos existentes
+        -No permite eliminar contactos
+10. Ejemplo de Uso
+    1. Usuario selecciona "ADD"
+    2. Ingresa información del contacto
+    3. Contacto se guarda en la agenda
+    4. Usuario selecciona "SEARCH"
+    5. Ve la lista de contactos
+    6. Selecciona un índice para ver detalles
+    7. Puede continuar añadiendo o buscando
+    8. Finalmente selecciona "EXIT" para salir
+
+RESUMEN::::::::::::::::::::::::::::::::::
+                Este ejercicio es una buena introducción a:
+                Programación orientada a objetos en C++
+                Manejo de entrada/salida
+                Validación de datos
+                Formateo de salida
+                Estructuras de datos básicas
+                Interacción con el usuario
